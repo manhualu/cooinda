@@ -440,6 +440,7 @@ const StyledAutocomplete = {
     boxShadow:
       "rgba(60, 66, 87, 0.05) 0px 7px 14px 0px, rgba(0, 0, 0, 0.05) 0px 3px 6px 0px",
     border: "none",
+    background: 'white',
   },
   ".MuiFormControl-root": {
     display: "flex",
@@ -457,7 +458,7 @@ const SearchBar = ({ country, openCountryModal, handleOpenCountryModal, handleCl
         options={countries}
         autoHighlight
         notched={true}
-        onChange={(_, country) => handleOpenCountryModal(country)}
+        onChange={(_, country) => handleOpenCountryModal(country.label)}
         getOptionLabel={(option) => option.label}
         renderOption={(props, option) => (
           <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>

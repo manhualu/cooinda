@@ -4,11 +4,15 @@ import {
   Geographies,
   Geography,
   Marker,
+  Sphere,
+  Graticule,
 } from "react-simple-maps";
+import { Tooltip } from "react-tooltip";
 
-const OurMap = () => {
+const OurMap = ({ handleOpenCountryModal }) => {
   const [clickedCountry, setClickedCountry] = useState("");
   const [markers, setMarkers] = useState([]);
+  const [tooltipContent, setTooltipContent] = useState("");
 
   const getCountryCoords = async (countryName) => {
     const res = await fetch(`http://localhost:3000/encode/${countryName}`, {
@@ -26,13 +30,15 @@ const OurMap = () => {
   const handleClick = async (geo) => {
     setClickedCountry(geo.properties.name);
     const coords = await getCountryCoords(geo.properties.name);
-    setMarkers([
-      {
-        markerOffset: -10,
-        name: geo.properties.name,
-        coordinates: [coords.lon, coords.lat],
-      },
-    ]);
+    // setMarkers([
+    //   {
+    //     markerOffset: -10,
+    //     name: geo.properties.name,
+    //     coordinates: [coords.lon, coords.lat],
+    //   },
+    // ]);
+    handleOpenCountryModal(geo.properties.name);
+    setClickedCountry("");
   };
 
   return (
@@ -44,52 +50,54 @@ const OurMap = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        background: "#e1eaf5",
       }}
     >
-      <div style={{ width: "1400px" }}>
-        <ComposableMap data-tip="" fill="black">
+      <div style={{ width: "1500px" }}>
+        <Tooltip>{tooltipContent}</Tooltip>
+        <ComposableMap
+          data-tip=""
+          fill="black"
+          projectionConfig={{
+            rotate: [-10, 0, 0],
+          }}
+        >
+          <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
+          <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
               geographies.map((geo) => {
-                const isClicked = clickedCountry === geo.properties.name;
+                // const isClicked = clickedCountry === geo.properties.name;
                 return (
-                  <Geography
-                    key={geo.rsmKey}
-                    stroke="#D6D6DA"
-                    geography={geo}
-                    style={
-                      isClicked
-                        ? {
-                            default: {
-                              fill: "#BED7C0",
-                              outline: "none",
-                            },
-                            hover: {
-                              fill: "#C7E0C4",
-                              outline: "none",
-                            },
-                            pressed: {
-                              fill: "#BED7C0",
-                              outline: "none",
-                            },
-                          }
-                        : {
-                            default: {
-                              fill: "#EAEAEC",
-                              outline: "none",
-                            },
-                            hover: {
-                              fill: "#C7E0C4",
-                              outline: "none",
-                            },
-                            pressed: {
-                              fill: "#BED7C0",
-                              outline: "none",
-                            },
-                          }
-                    }
-                    onClick={() => handleClick(geo)}
-                  />
+                  <>
+                    <Geography
+                      key={geo.rsmKey}
+                      stroke="#b1b1b1"
+                      strokeWidth={0.5}
+                      geography={geo}
+                      style={{
+                        default: {
+                          fill: "white",
+                          outline: "none",
+                        },
+                        hover: {
+                          fill: "#578653",
+                          outline: "none",
+                        },
+                        pressed: {
+                          fill: "#578653",
+                          outline: "none",
+                        },
+                      }}
+                      onClick={() => handleClick(geo)}
+                      onMouseEnter={() => {
+                        setTooltipContent(`${geo.properties.name}`);
+                      }}
+                      onMouseLeave={() => {
+                        setTooltipContent("");
+                      }}
+                    />
+                  </>
                 );
               })
             }

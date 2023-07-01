@@ -37,12 +37,12 @@ const CountryModal = ({ country, openCountryModal, handleCloseCountryModal }) =>
           {/* <img
             loading="lazy"
             width="36"
-            src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`}
-            srcSet={`https://flagcdn.com/w40/${country.code.toLowerCase()}.png 2x`}
+            src={`https://flagcdn.com/w20/${country.code?.toLowerCase()}.png`}
+            srcSet={`https://flagcdn.com/w40/${country.code?.toLowerCase()}.png 2x`}
             alt=""
           /> */}
           <Typography id="modal-modal-title" variant="h5" component="h2" sx={{ fontWeight: '600' }}>
-            {country.label}
+            {country}
           </Typography>
         </div>
         <Divider/>

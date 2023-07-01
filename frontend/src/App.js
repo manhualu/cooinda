@@ -30,11 +30,10 @@ const App = () => {
   const [toggleCivilEvents, setToggleCivilEvents] = useState(false);
   const [toggleHealth, setToggleHealth] = useState(false);
 
-  const [country, setCountry] = useState({});
+  const [country, setCountry] = useState("");
   const [openCountryModal, setOpenCountrymodal] = useState(false);
 
   const handleOpenCountryModal = (newCountry) => {
-    console.log(newCountry);
     if (newCountry) {
       setCountry(newCountry);
       setOpenCountrymodal(true);
@@ -53,7 +52,7 @@ const App = () => {
   useEffect(() => {}, [toggleHealth]);
 
   return (
-    <div style={{ overflowY: 'hidden', height: '100%' }}>
+    <div style={{ overflowY: "hidden", height: "100%" }}>
       <MainContainer>
         <a href="/">
           <img src={logo} alt="cooinda" height={36} />
@@ -83,7 +82,7 @@ const App = () => {
           />
         </FiltersContainer>
       </MainContainer>
-      <OurMap />
+      <OurMap handleOpenCountryModal={handleOpenCountryModal} />
     </div>
   );
 };
