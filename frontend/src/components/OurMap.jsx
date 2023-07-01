@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -7,24 +7,37 @@ import {
   ZoomableGroup,
 } from "react-simple-maps";
 
-const markers = [
-  {
-    markerOffset: -15,
-    name: "Sau Paulo",
-    coordinates: [-58.816, -34.6037],
-  },
-];
-
 const OurMap = () => {
   const [countryName, setCountryName] = useState("");
   const [clickedCountry, setClickedCountry] = useState("");
+  const [markers, setMarkers] = useState([]);
+
+  useEffect(() => {}, []);
+
+  const getCountryCoords = async (countryName) => {
+    const res = await fetch(`http://localhost:3000/encode/${countryName}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const nutz = await res.json();
+    return nutz;
+  };
 
   const geoUrl =
     "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
-  const handleClick = (geo) => {
+  const handleClick = async (geo) => {
     setCountryName(geo.properties.name);
     setClickedCountry(geo.properties.name);
+    const coords = await getCountryCoords(geo.properties.name);
+    setMarkers([
+      {
+        markerOffset: -15,
+        name: geo.properties.name,
+        coordinates: [coords.lon, coords.lat],
+      },
+    ]);
   };
 
   return (
@@ -46,7 +59,6 @@ const OurMap = () => {
               {({ geographies }) =>
                 geographies.map((geo) => {
                   const isClicked = clickedCountry === geo.properties.name;
-
                   return (
                     <Geography
                       key={geo.rsmKey}
