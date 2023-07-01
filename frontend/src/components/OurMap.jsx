@@ -55,7 +55,6 @@ const OurMap = () => {
                 return (
                   <Geography
                     key={geo.rsmKey}
-                    // fill={isClicked ? "#BED7C0" : "#EAEAEC"}
                     stroke="#D6D6DA"
                     geography={geo}
                     style={
