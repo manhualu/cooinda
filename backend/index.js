@@ -36,3 +36,45 @@ app.get("/help/:country", (req, res) => {
     const country = req.params.country;
     res.json(getEmergency(country));
   });
+
+async function getCountryDescription(countryName) {
+    const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=true&titles=${encodeURIComponent(
+        countryName
+    )}`;
+
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    const pages = data.query.pages;
+    const description = pages[Object.keys(pages)[0]].extract;
+
+    // Extract plain text until the first newline character
+    const firstParagraph = description.split("</p>")[1];
+    const pattern = /<.*?>| \(.*?\)|\".*\"|\[.*?\]|>|\)|\n/g;
+    const cleaned_text = firstParagraph.replace(pattern, "");
+
+    return cleaned_text;
+}
+
+async function getCountryInfo(countryName) {
+    const apiUrl = `https://restcountries.com/v3/name/${encodeURIComponent(countryName)}`;
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+  
+    const countryInfo = data[0]; 
+    const { name, capital, population, languages } = countryInfo;
+    const description = await getCountryDescription(countryName);
+  
+    console.log("Country Name:", name.common);
+    console.log(`Description: ${description}`);
+    console.log(`Capital: ${capital[0]} (pop. ${population})`);
+    console.log("Languages:", Object.values(languages).join(", "));
+    
+}
+  
+getCountryInfo("Mexico");
+
+
+  
+  
+  
