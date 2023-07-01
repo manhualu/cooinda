@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -8,11 +8,8 @@ import {
 } from "react-simple-maps";
 
 const OurMap = () => {
-  const [countryName, setCountryName] = useState("");
   const [clickedCountry, setClickedCountry] = useState("");
   const [markers, setMarkers] = useState([]);
-
-  useEffect(() => {}, []);
 
   const getCountryCoords = async (countryName) => {
     const res = await fetch(`http://localhost:3000/encode/${countryName}`, {
@@ -28,7 +25,6 @@ const OurMap = () => {
     "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
   const handleClick = async (geo) => {
-    setCountryName(geo.properties.name);
     setClickedCountry(geo.properties.name);
     const coords = await getCountryCoords(geo.properties.name);
     setMarkers([
@@ -52,7 +48,6 @@ const OurMap = () => {
       }}
     >
       <div style={{ width: "1400px", borderStyle: "double" }}>
-        <div>{countryName}</div>
         <ComposableMap data-tip="">
           <ZoomableGroup zoom={1}>
             <Geographies geography={geoUrl}>
