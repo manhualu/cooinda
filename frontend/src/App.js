@@ -6,6 +6,7 @@ import CivilEventsButton from './components/CivilEventsButton';
 import NaturalDisastersButton from './components/NaturalDisastersButton';
 import HealthButton from './components/HealthButton';
 import { React, useState, useEffect } from 'react';
+import logo from './assets/logo.png'
 
 const MainContainer = styled('div')`
   margin: 20px;
@@ -45,6 +46,7 @@ const App = () => {
   return (
     <>
       <MainContainer>
+        <img src={logo} height={36}/>
         <SearchBar/>
         <FiltersContainer>
           <WeatherButton toggleWeather={toggleWeather} setToggleWeather={setToggleWeather}/>

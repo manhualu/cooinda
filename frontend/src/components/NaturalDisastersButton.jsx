@@ -7,7 +7,7 @@ const NaturalDisastersButton = ({ toggleNaturalDisasters, setToggleNaturalDisast
   }
 
   return (
-    <Button onClick={toggle}>
+    <Button onClick={toggle} style={ toggleNaturalDisasters ? { background: '#a13b3b', color: 'white' } : { background: 'white', color: '#333333' } }>
       🌊 Natural disasters
     </Button>
   );

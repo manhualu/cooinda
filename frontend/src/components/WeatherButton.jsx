@@ -8,7 +8,7 @@ const WeatherButton = ({ toggleWeather, setToggleWeather }) => {
   }
 
   return (
-    <Button onClick={toggle}>
+    <Button onClick={toggle} style={ toggleWeather ? { background: '#375380', color: 'white' } : { background: 'white', color: '#333333' } }>
       🌤️ Weather
     </Button>
   );

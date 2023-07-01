@@ -7,7 +7,7 @@ const HealthButton = ({ toggleHealth, setToggleHealth }) => {
   }
 
   return (
-    <Button onClick={toggle}>
+    <Button onClick={toggle} style={ toggleHealth ? { background: '#d6a11a', color: 'white' } : { background: 'white', color: '#333333' } }>
       🏥 Health
     </Button>
   );
