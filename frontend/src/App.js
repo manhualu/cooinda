@@ -14,6 +14,8 @@ const MainContainer = styled("div")`
   display: flex;
   gap: 25px;
   align-items: center;
+  position: absolute;
+  z-index: 100;
 `;
 
 const FiltersContainer = styled("div")`
@@ -51,7 +53,7 @@ const App = () => {
   useEffect(() => {}, [toggleHealth]);
 
   return (
-    <>
+    <div style={{ overflowY: 'hidden', height: '100%' }}>
       <MainContainer>
         <a href="/">
           <img src={logo} alt="cooinda" height={36} />
@@ -82,7 +84,7 @@ const App = () => {
         </FiltersContainer>
       </MainContainer>
       <OurMap />
-    </>
+    </div>
   );
 };
 
