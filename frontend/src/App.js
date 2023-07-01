@@ -8,6 +8,7 @@ import HealthButton from "./components/HealthButton";
 import { React, useState, useEffect } from "react";
 import logo from "./assets/logo.png";
 import OurMap from "./components/OurMap";
+import { Tooltip } from 'react-tooltip';
 
 const MainContainer = styled("div")`
   margin: 20px;
@@ -30,11 +31,12 @@ const App = () => {
   const [toggleCivilEvents, setToggleCivilEvents] = useState(false);
   const [toggleHealth, setToggleHealth] = useState(false);
 
-  const [country, setCountry] = useState({});
+  const [country, setCountry] = useState('');
   const [openCountryModal, setOpenCountrymodal] = useState(false);
 
+  const [tooltipContent, setTooltipContent] = useState("");
+
   const handleOpenCountryModal = (newCountry) => {
-    console.log(newCountry);
     if (newCountry) {
       setCountry(newCountry);
       setOpenCountrymodal(true);
@@ -83,7 +85,8 @@ const App = () => {
           />
         </FiltersContainer>
       </MainContainer>
-      <OurMap />
+      <OurMap handleOpenCountryModal={handleOpenCountryModal} setTooltipContent={setTooltipContent}/>
+      <Tooltip>{tooltipContent}</Tooltip>
     </div>
   );
 };

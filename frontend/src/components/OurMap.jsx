@@ -6,9 +6,10 @@ import {
   Marker,
 } from "react-simple-maps";
 
-const OurMap = () => {
+const OurMap = ({ handleOpenCountryModal, setTooltipContent }) => {
   const [clickedCountry, setClickedCountry] = useState("");
   const [markers, setMarkers] = useState([]);
+
 
   const getCountryCoords = async (countryName) => {
     const res = await fetch(`http://localhost:3000/encode/${countryName}`, {
@@ -26,13 +27,15 @@ const OurMap = () => {
   const handleClick = async (geo) => {
     setClickedCountry(geo.properties.name);
     const coords = await getCountryCoords(geo.properties.name);
-    setMarkers([
-      {
-        markerOffset: -10,
-        name: geo.properties.name,
-        coordinates: [coords.lon, coords.lat],
-      },
-    ]);
+    // setMarkers([
+    //   {
+    //     markerOffset: -10,
+    //     name: geo.properties.name,
+    //     coordinates: [coords.lon, coords.lat],
+    //   },
+    // ]);
+    handleOpenCountryModal(geo.properties.name);
+    setClickedCountry('');
   };
 
   return (
@@ -89,6 +92,12 @@ const OurMap = () => {
                           }
                     }
                     onClick={() => handleClick(geo)}
+                    onMouseEnter={() => {
+                      setTooltipContent(`${geo.properties.name}`);
+                    }}
+                    onMouseLeave={() => {
+                      setTooltipContent("");
+                    }}
                   />
                 );
               })

@@ -457,7 +457,7 @@ const SearchBar = ({ country, openCountryModal, handleOpenCountryModal, handleCl
         options={countries}
         autoHighlight
         notched={true}
-        onChange={(_, country) => handleOpenCountryModal(country)}
+        onChange={(_, country) => handleOpenCountryModal(country.label)}
         getOptionLabel={(option) => option.label}
         renderOption={(props, option) => (
           <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
