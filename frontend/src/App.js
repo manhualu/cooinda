@@ -27,8 +27,20 @@ const App = () => {
   const [toggleCivilEvents, setToggleCivilEvents] = useState(false);
   const [toggleHealth, setToggleHealth] = useState(false);
 
+  const [country, setCountry] = useState({});
+  const [openCountryModal, setOpenCountrymodal] = useState(false);
+
+  const handleOpenCountryModal = (newCountry) => {
+    console.log(newCountry);
+    if (newCountry) {
+      setCountry(newCountry);
+      setOpenCountrymodal(true);
+    }
+  }
+  const handleCloseCountryModal = () => setOpenCountrymodal(false);
+
   useEffect(() => {
-    console.log(toggleWeather)
+    
   }, [toggleWeather]);
 
   useEffect(() => {
@@ -46,8 +58,8 @@ const App = () => {
   return (
     <>
       <MainContainer>
-        <img src={logo} height={36}/>
-        <SearchBar/>
+        <a href='/'><img src={logo} height={36}/></a>
+        <SearchBar country={country} openCountryModal={openCountryModal} handleOpenCountryModal={handleOpenCountryModal} handleCloseCountryModal={handleCloseCountryModal}/>
         <FiltersContainer>
           <WeatherButton toggleWeather={toggleWeather} setToggleWeather={setToggleWeather}/>
           <NaturalDisastersButton toggleNaturalDisasters={toggleNaturalDisasters} setToggleNaturalDisasters={setToggleNaturalDisasters}/>
