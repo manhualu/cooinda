@@ -1,5 +1,11 @@
-// Import the library
-const server = require('server');
+const express = require('express')
+const app = express()
+const port = 3000
 
-// Launch the server to always answer "Hello world"
-server(ctx => 'Hello world!');
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
