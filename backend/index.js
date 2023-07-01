@@ -1,10 +1,12 @@
 const express = require("express");
 const fetch = require("node-fetch");
+const cors = require("cors");
 const app = express();
 const port = 3000;
 const fs = require("fs");
 
 app.use(express.json());
+app.use(cors());
 
 const emergencyCountries = JSON.parse(fs.readFileSync("./data.json", "utf8"));
 function getEmergency(country) {
@@ -34,8 +36,6 @@ app.get("/encode/:country", async (req, res) => {
     lat: data[0].lat,
     lon: data[0].lon,
   };
-  console.log(data);
-  console.log(ret);
   res.json(ret);
 });
 
