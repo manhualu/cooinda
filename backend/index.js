@@ -9,7 +9,9 @@ const emergencyCountries = JSON.parse(fs.readFileSync('./emergency.json', 'utf8'
 function getEmergency(country) {
     for (const eachCountry of emergencyCountries) {
         if (eachCountry.Country.Name.toLowerCase() === country.toLowerCase()) {
-            return(`Police number for ${country}: ${eachCountry.Police.All}`);
+            return({"Police": eachCountry.Police.All[0],
+                    "Ambulance": eachCountry.Ambulance.All[0],
+                    "Fire": eachCountry.Fire.All[0]});
         }
     }
 }
@@ -32,10 +34,5 @@ app.listen(port, () => {
 
 app.get("/help/:country", (req, res) => {
     const country = req.params.country;
-    console.log(country);
     res.json(getEmergency(country));
   });
-
-
-console.log(getEmergency("Australia"));
-// getEmergency("australia");
