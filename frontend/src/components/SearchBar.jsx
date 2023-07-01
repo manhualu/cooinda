@@ -440,6 +440,7 @@ const StyledAutocomplete = {
     boxShadow:
       "rgba(60, 66, 87, 0.05) 0px 7px 14px 0px, rgba(0, 0, 0, 0.05) 0px 3px 6px 0px",
     border: "none",
+    background: 'white',
   },
   ".MuiFormControl-root": {
     display: "flex",
