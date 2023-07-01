@@ -6,9 +6,7 @@ const fs = require("fs");
 
 app.use(express.json());
 
-const emergencyCountries = JSON.parse(
-  fs.readFileSync("./emergency.json", "utf8")
-);
+const emergencyCountries = JSON.parse(fs.readFileSync("./data.json", "utf8"));
 function getEmergency(country) {
   for (const eachCountry of emergencyCountries) {
     if (eachCountry.Country.Name.toLowerCase() === country.toLowerCase()) {
@@ -36,8 +34,22 @@ app.get("/encode/:country", async (req, res) => {
     lat: data[0].lat,
     lon: data[0].lon,
   };
-
+  console.log(data);
+  console.log(ret);
   res.json(ret);
+});
+
+const API_key = "278d110822688566d186c07c3d9630c8";
+app.get("/weather/:country", async (req, res) => {
+  const country = req.params.country;
+  const response = await fetch(`http://localhost:3000/encode/${country}`);
+  const { lat, lon } = await response.json();
+  console.log(lat, lon);
+  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_key}`;
+  const response2 = await fetch(apiUrl);
+  const data = await response2.json();
+  //const data = "lol";
+  res.json(data);
 });
 
 app.get("/deeznutz", (req, res) => {
