@@ -263,5 +263,6 @@
         "disaster":[{"name":"Cholera Outbreak","date":"Mar 2022"}],
         "capital":"Lilongwe (pop. 19129955)",
         "languages":"English, Chewa",
-        "coordinates":{"lat":"-13.2687204","lon":"33.9301963"}}
+        "coordinates":{"lat":"-13.2687204","lon":"33.9301963"}
+    }
 ]
