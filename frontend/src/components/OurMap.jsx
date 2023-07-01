@@ -4,11 +4,8 @@ import {
   Geographies,
   Geography,
   Marker,
-  Annotation,
   ZoomableGroup,
 } from "react-simple-maps";
-import ReactToolTip from "react-tooltip";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const markers = [
   {
@@ -41,7 +38,6 @@ const OurMap = () => {
         alignItems: "center",
       }}
     >
-      <h1>Our Map</h1>
       <div style={{ width: "1400px", borderStyle: "double" }}>
         <div>{countryName}</div>
         <ComposableMap data-tip="">
@@ -50,7 +46,7 @@ const OurMap = () => {
               {({ geographies }) =>
                 geographies.map((geo) => {
                   const isClicked = clickedCountry === geo.properties.name;
-                  
+
                   return (
                     <Geography
                       key={geo.rsmKey}
