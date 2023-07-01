@@ -4,27 +4,52 @@ const fs = require("fs");
 
 const url = "http://localhost:3000/encode";
 
+const test = data;
+
 const scrape = async () => {
   const result = [];
-  const country = "Australia";
-  for (const country of data) {
-    const response = await fetch(
-      `https://geocode.maps.co/search?country=${country}`
-    );
-    const data = await response.json();
-    const ret = {
-      lat: data[0].lat,
-      lon: data[0].lon,
-    };
+  // const country = "Afghanistan";
 
-    const obj = {
-      country: country,
-      location: ret,
-    };
-    //   console.log(data);
-    console.log(obj);
-    result.push(obj);
+  //console.log(test);
+
+  for (const country of test) {
+    try {
+      console.log(country.name);
+      const response = await fetch(
+        `https://geocode.maps.co/search?country=${country.name}`
+      );
+      const data = await response.json();
+      const ret = {
+        lat: data[0].lat,
+        lon: data[0].lon,
+      };
+
+      const obj = {
+        country: country,
+        location: ret,
+      };
+      //   console.log(data);
+      console.log(obj);
+      result.push(obj);
+    } catch {
+      console.log("asdasdasdsad");
+    }
   }
+
+  // const response = await fetch(
+  //   `https://geocode.maps.co/search?country=${country}`
+  // );
+  // const data = await response.json();
+  // const ret = {
+  //   lat: data[0].lat,
+  //   lon: data[0].lon,
+  // };
+
+  // const obj = {
+  //   country: country,
+  //   location: ret,
+  // };
+  // //   console.log(data);
 
   console.log(result);
   const dataToWrite = JSON.stringify(result);
