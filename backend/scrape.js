@@ -25,14 +25,16 @@ const scrape = async () => {
       };
 
       const obj = {
-        country: country,
-        location: ret,
-      };
+        name: country.name,
+        code: country.code,
+        coordinates: ret
+      }
+
       //   console.log(data);
       console.log(obj);
       result.push(obj);
-    } catch {
-      console.log("asdasdasdsad");
+    } catch (e) {
+      //console.log(e);
     }
   }
 

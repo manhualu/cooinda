@@ -5,6 +5,8 @@ const app = express();
 const port = 3000;
 const fs = require("fs");
 
+const countries = require("./locations.json");
+
 app.use(express.json());
 app.use(cors());
 
@@ -69,42 +71,94 @@ app.get("/help/:country", (req, res) => {
     res.json(getEmergency(country));
   });
 
-async function getCountryDescription(countryName) {
-    const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=true&titles=${encodeURIComponent(
-        countryName
-    )}`;
+// async function getCountryDescription(countryName) {
+//   try {
+//     const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=true&titles=${encodeURIComponent(
+//       countryName
+//     )}`;
 
-    const response = await fetch(apiUrl);
-    const data = await response.json();
+//     const response = await fetch(apiUrl);
+//     const data = await response.json();
 
-    const pages = data.query.pages;
-    const description = pages[Object.keys(pages)[0]].extract;
+//     if (!response.ok) {
+//       throw new Error("Failed to fetch data from the API");
+//     }
 
-    // Extract plain text until the first newline character
-    const firstParagraph = description.split("</p>")[1];
-    const pattern = /<.*?>| \(.*?\)|\".*\"|\[.*?\]|>|\)|\n/g;
-    const cleaned_text = firstParagraph.replace(pattern, "");
+//     if (!data.query || !data.query.pages) {
+//       throw new Error("Invalid response from the API");
+//     }
 
-    return cleaned_text;
-}
+//     const pages = data.query.pages;
+//     const pageKeys = Object.keys(pages);
+
+//     if (pageKeys.length === 0) {
+//       throw new Error("No data available for the specified country");
+//     }
+
+//     const description = pages[pageKeys[0]].extract;
+
+//     // Extract plain text until the first newline character
+//     const firstParagraph = description.split("</p>")[1];
+//     const pattern = /<.*?>| \(.*?\)|\".*\"|\[.*?\]|>|\)|\n/g;
+//     const cleanedText = firstParagraph.replace(pattern, "");
+
+//     return cleanedText;
+//   } catch (error) {
+//     console.error("Error:", error.message);
+//     throw error; // Rethrow the error to be caught by the caller
+//   }
+// }
+
 
 async function getCountryInfo(countryName) {
-    const apiUrl = `https://restcountries.com/v3/name/${encodeURIComponent(countryName)}`;
-    const response = await fetch(apiUrl);
-    const data = await response.json();
+    try {
+      const apiUrl = `https://restcountries.com/v3/name/${encodeURIComponent(countryName)}`;
+      const response = await fetch(apiUrl);
   
-    const countryInfo = data[0]; 
-    const { name, capital, population, languages } = countryInfo;
-    const description = await getCountryDescription(countryName);
+      if (!response.ok) {
+        throw new Error("Failed to fetch country information");
+      }
   
-    console.log("Country Name:", name.common);
-    console.log(`Description: ${description}`);
-    console.log(`Capital: ${capital[0]} (pop. ${population})`);
-    console.log("Languages:", Object.values(languages).join(", "));
-    
+      const data = await response.json();
+      const countryInfo = data[0];
+  
+      if (!countryInfo) {
+        throw new Error("No information available for the specified country");
+      }
+  
+      const { capital, population, languages } = countryInfo;
+  
+      return {
+        "Capital": `${capital?.[0]} (pop. ${population})`,
+        "Languages": Object.values(languages).join(", ")
+      }
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  }
+
+for (const country of countries) {
+  getCountryInfo(country.name)
+    .then(countryInfo => {
+      country.capital = countryInfo.Capital;
+      country.languages = countryInfo.Languages;
+      
+      // write updated countries array to the JSON file cuz
+      fs.writeFile('locations.json', JSON.stringify(countries), 'utf8', err => {
+        if (err) {
+          console.error('Error writing to file:', err);
+        } else {
+          console.log('JSON file updated successfully');
+        }
+      });
+    })
+    .catch(error => {
+      console.error(error);
+    });
 }
-  
-getCountryInfo("Mexico");
+
+
+
 
 
   
