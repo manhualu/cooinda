@@ -4,7 +4,6 @@ import {
   Geographies,
   Geography,
   Marker,
-  ZoomableGroup,
 } from "react-simple-maps";
 
 const OurMap = () => {
@@ -29,7 +28,7 @@ const OurMap = () => {
     const coords = await getCountryCoords(geo.properties.name);
     setMarkers([
       {
-        markerOffset: -15,
+        markerOffset: -10,
         name: geo.properties.name,
         coordinates: [coords.lon, coords.lat],
       },
@@ -47,52 +46,54 @@ const OurMap = () => {
         alignItems: "center",
       }}
     >
-      <div style={{ width: "1400px", borderStyle: "double" }}>
-        <ComposableMap data-tip="">
-          <ZoomableGroup zoom={1}>
-            <Geographies geography={geoUrl}>
-              {({ geographies }) =>
-                geographies.map((geo) => {
-                  const isClicked = clickedCountry === geo.properties.name;
-                  return (
-                    <Geography
-                      key={geo.rsmKey}
-                      fill={isClicked ? "#BED7C0" : "#EAEAEC"}
-                      stroke="#D6D6DA"
-                      geography={geo}
-                      style={{
-                        default: {
-                          fill: "#EEE",
-                          outline: "none",
-                        },
-                        hover: {
-                          fill: "#C7E0C4",
-                          outline: "none",
-                        },
-                        pressed: {
-                          fill: "#BED7C0",
-                          outline: "none",
-                        },
-                      }}
-                      onClick={() => handleClick(geo)}
-                    />
-                  );
-                })
-              }
-            </Geographies>
-            {markers.map(({ name, coordinates, markerOffset }) => (
-              <Marker key={name} coordinates={coordinates}>
-                <circle r={5} fill="#F00" stroke="#fff" strokeWidth={2} />
-                <text
-                  textAnchor="middle"
-                  y={markerOffset}
-                  style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
-                >
-                  {name}
-                </text>
-              </Marker>
-            ))}
-          </ZoomableGroup>
+      <div style={{ width: "1400px" }}>
+        <ComposableMap data-tip="" fill="black">
+          <Geographies geography={geoUrl}>
+            {({ geographies }) =>
+              geographies.map((geo) => {
+                const isClicked = clickedCountry === geo.properties.name;
+                return (
+                  <Geography
+                    key={geo.rsmKey}
+                    fill={isClicked ? "#BED7C0" : "#EAEAEC"}
+                    stroke="#D6D6DA"
+                    geography={geo}
+                    style={{
+                      default: {
+                        fill: "#EEE",
+                        outline: "none",
+                      },
+                      hover: {
+                        fill: "#C7E0C4",
+                        outline: "none",
+                      },
+                      pressed: {
+                        fill: "#BED7C0",
+                        outline: "none",
+                      },
+                    }}
+                    onClick={() => handleClick(geo)}
+                  />
+                );
+              })
+            }
+          </Geographies>
+          {markers.map(({ name, coordinates, markerOffset }) => (
+            <Marker key={name} coordinates={coordinates}>
+              <circle r={3} fill="#1e5220" stroke="#fff" strokeWidth={1} />
+              <text
+                textAnchor="middle"
+                y={markerOffset}
+                style={{
+                  fontSize: "0.6rem",
+                  fontFamily: "Monserrat",
+                  fill: "#5D5A6D",
+                }}
+              >
+                {name}
+              </text>
+            </Marker>
+          ))}
         </ComposableMap>
       </div>
     </div>

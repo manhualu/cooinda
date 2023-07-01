@@ -1,6 +1,9 @@
-import { Autocomplete } from "@mui/material";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
+import styled from 'styled-components';
+import { Autocomplete } from '@mui/material';
+import TextField from '@mui/material/TextField';
+import CountriesData from '../data.json';
+import Box from '@mui/material/Box';
+import CountryModal from './CountryModal';
 
 // From https://bitbucket.org/atlassian/atlaskit-mk-2/raw/4ad0e56649c3e6c973e226b7efaeb28cb240ccb0/packages/core/select/src/data/countries.js
 const countries = [
@@ -444,41 +447,42 @@ const StyledAutocomplete = {
   },
 };
 
-const SearchBar = () => {
+const SearchBar = ({ country, openCountryModal, handleOpenCountryModal, handleCloseCountryModal }) => {
+
   return (
-    <Autocomplete
-      id="country-select-demo"
-      sx={StyledAutocomplete}
-      options={countries}
-      autoHighlight
-      notched={true}
-      getOptionLabel={(option) => option.label}
-      renderOption={(props, option) => (
-        <Box
-          component="li"
-          sx={{ "& > img": { mr: 2, flexShrink: 0 } }}
-          {...props}
-        >
-          <img
-            loading="lazy"
-            width="20"
-            src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
-            srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
-            alt=""
+    <>
+      <Autocomplete
+        id="country-select-demo"
+        sx={StyledAutocomplete}
+        options={countries}
+        autoHighlight
+        notched={true}
+        onChange={(_, country) => handleOpenCountryModal(country)}
+        getOptionLabel={(option) => option.label}
+        renderOption={(props, option) => (
+          <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+            <img
+              loading="lazy"
+              width="20"
+              src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+              srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+              alt=""
+            />
+            {option.label} ({option.code}) +{option.phone}
+          </Box>
+        )}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            inputProps={{
+              ...params.inputProps,
+              autoComplete: 'new-password', // disable autocomplete and autofill
+            }}
           />
-          {option.label} ({option.code}) +{option.phone}
-        </Box>
-      )}
-      renderInput={(params) => (
-        <TextField
-          {...params}
-          inputProps={{
-            ...params.inputProps,
-            autoComplete: "new-password", // disable autocomplete and autofill
-          }}
-        />
-      )}
-    />
+        )}
+      />
+      <CountryModal country={country} openCountryModal={openCountryModal} handleCloseCountryModal={handleCloseCountryModal}/>
+    </>
   );
 };
 
