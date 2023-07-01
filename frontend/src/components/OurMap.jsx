@@ -55,23 +55,40 @@ const OurMap = () => {
                 return (
                   <Geography
                     key={geo.rsmKey}
-                    fill={isClicked ? "#BED7C0" : "#EAEAEC"}
+                    // fill={isClicked ? "#BED7C0" : "#EAEAEC"}
                     stroke="#D6D6DA"
                     geography={geo}
-                    style={{
-                      default: {
-                        fill: "#EEE",
-                        outline: "none",
-                      },
-                      hover: {
-                        fill: "#C7E0C4",
-                        outline: "none",
-                      },
-                      pressed: {
-                        fill: "#BED7C0",
-                        outline: "none",
-                      },
-                    }}
+                    style={
+                      isClicked
+                        ? {
+                            default: {
+                              fill: "#BED7C0",
+                              outline: "none",
+                            },
+                            hover: {
+                              fill: "#C7E0C4",
+                              outline: "none",
+                            },
+                            pressed: {
+                              fill: "#BED7C0",
+                              outline: "none",
+                            },
+                          }
+                        : {
+                            default: {
+                              fill: "#EAEAEC",
+                              outline: "none",
+                            },
+                            hover: {
+                              fill: "#C7E0C4",
+                              outline: "none",
+                            },
+                            pressed: {
+                              fill: "#BED7C0",
+                              outline: "none",
+                            },
+                          }
+                    }
                     onClick={() => handleClick(geo)}
                   />
                 );
