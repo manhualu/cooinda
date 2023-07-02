@@ -26,11 +26,11 @@ const FiltersContainer = styled("div")`
 `;
 
 const markerColours = {
-  weather: '#375380',
-  natural: '#a13b3b',
-  civil: '#2a612d',
-  health: '#d6a11a',
-}
+  weather: "#375380",
+  natural: "#a13b3b",
+  civil: "#2a612d",
+  health: "#d6a11a",
+};
 
 const App = () => {
   const [toggleWeather, setToggleWeather] = useState(true);
@@ -54,14 +54,14 @@ const App = () => {
   };
   const handleCloseCountryModal = () => setOpenCountrymodal(false);
 
-  const getWeather = async(lat, lon) => {
-    const response = await fetch(`http://localhost:3000/weather/${lat}/${lon}`);
-    const data = await response.json();
-    return {
-      temp: data.list[0].main.temp,
-      description: data.list[0].weather.description, 
-    }
-  }
+  // const getWeather = async (lat, lon) => {
+  //   const response = await fetch(`http://localhost:3000/weather/${lat}/${lon}`);
+  //   const data = await response.json();
+  //   return {
+  //     temp: data.list[0].main.temp,
+  //     description: data.list[0].weather.description,
+  //   };
+  // };
 
   useEffect(() => {
     const weatherAlerts = [];
@@ -72,35 +72,38 @@ const App = () => {
       let random1 = Math.random();
       let random2 = Math.random();
       for (const alert of country.alerts) {
-        if (alert.type === 'natural') {
-          naturalDisastersAlerts.push(
-            {
-              markerOffset: -10,
-              name: alert.name,
-              coordinates: [(parseFloat(country.coordinates.lon) + random1).toString(), (parseFloat(country.coordinates.lat) + random2).toString()],
-              colour: markerColours[alert.type]
-            }
-          )
+        if (alert.type === "natural") {
+          naturalDisastersAlerts.push({
+            markerOffset: -10,
+            name: alert.name,
+            coordinates: [
+              (parseFloat(country.coordinates.lon) + random1).toString(),
+              (parseFloat(country.coordinates.lat) + random2).toString(),
+            ],
+            colour: markerColours[alert.type],
+          });
         }
-        if (alert.type === 'civil') {
-          civilEventsAlerts.push(
-            {
-              markerOffset: -10,
-              name: alert.name,
-              coordinates: [(parseFloat(country.coordinates.lon) + random1).toString(), (parseFloat(country.coordinates.lat) + random2).toString()],
-              colour: markerColours[alert.type]
-            }
-          )
+        if (alert.type === "civil") {
+          civilEventsAlerts.push({
+            markerOffset: -10,
+            name: alert.name,
+            coordinates: [
+              (parseFloat(country.coordinates.lon) + random1).toString(),
+              (parseFloat(country.coordinates.lat) + random2).toString(),
+            ],
+            colour: markerColours[alert.type],
+          });
         }
-        if (alert.type === 'health') {
-          healthAlerts.push(
-            {
-              markerOffset: -10,
-              name: alert.name,
-              coordinates: [(parseFloat(country.coordinates.lon) + random1).toString(), (parseFloat(country.coordinates.lat) + random2).toString()],
-              colour: markerColours[alert.type]
-            }
-          )
+        if (alert.type === "health") {
+          healthAlerts.push({
+            markerOffset: -10,
+            name: alert.name,
+            coordinates: [
+              (parseFloat(country.coordinates.lon) + random1).toString(),
+              (parseFloat(country.coordinates.lat) + random2).toString(),
+            ],
+            colour: markerColours[alert.type],
+          });
         }
       }
       // const weather = await getWeather(country.coordinates.lat, country.coordinates.lon);
@@ -126,15 +129,16 @@ const App = () => {
         for (const alert of country.alerts) {
           let random1 = Math.random() * 10 + Math.random();
           let random2 = Math.random() * 10 + Math.random();
-          if (alert.type === 'weather') {
-            weatherAlerts.push(
-              {
-                markerOffset: -10,
-                name: alert.name,
-                coordinates: [(parseFloat(country.coordinates.lon) + random1).toString(), (parseFloat(country.coordinates.lat) + random2).toString()],
-                colour: markerColours[alert.type]
-              }
-            )
+          if (alert.type === "weather") {
+            weatherAlerts.push({
+              markerOffset: -10,
+              name: alert.name,
+              coordinates: [
+                (parseFloat(country.coordinates.lon) + random1).toString(),
+                (parseFloat(country.coordinates.lat) + random2).toString(),
+              ],
+              colour: markerColours[alert.type],
+            });
           }
         }
       }
@@ -151,15 +155,16 @@ const App = () => {
         for (const alert of country.alerts) {
           let random1 = Math.random();
           let random2 = Math.random();
-          if (alert.type === 'natural') {
-            naturalDisastersAlerts.push(
-              {
-                markerOffset: -10,
-                name: alert.name,
-                coordinates: [(parseFloat(country.coordinates.lon) + random1).toString(), (parseFloat(country.coordinates.lat) + random2).toString()],
-                colour: markerColours[alert.type]
-              }
-            )
+          if (alert.type === "natural") {
+            naturalDisastersAlerts.push({
+              markerOffset: -10,
+              name: alert.name,
+              coordinates: [
+                (parseFloat(country.coordinates.lon) + random1).toString(),
+                (parseFloat(country.coordinates.lat) + random2).toString(),
+              ],
+              colour: markerColours[alert.type],
+            });
           }
         }
       }
@@ -176,15 +181,16 @@ const App = () => {
         for (const alert of country.alerts) {
           let random1 = Math.random();
           let random2 = Math.random();
-          if (alert.type === 'civil') {
-            civilEventsAlerts.push(
-              {
-                markerOffset: -10,
-                name: alert.name,
-                coordinates: [(parseFloat(country.coordinates.lon) + random1).toString(), (parseFloat(country.coordinates.lat) + random2).toString()],
-                colour: markerColours[alert.type]
-              }
-            )
+          if (alert.type === "civil") {
+            civilEventsAlerts.push({
+              markerOffset: -10,
+              name: alert.name,
+              coordinates: [
+                (parseFloat(country.coordinates.lon) + random1).toString(),
+                (parseFloat(country.coordinates.lat) + random2).toString(),
+              ],
+              colour: markerColours[alert.type],
+            });
           }
         }
       }
@@ -199,18 +205,19 @@ const App = () => {
       const healthAlerts = [];
       for (const country of data) {
         for (const alert of country.alerts) {
-          let precision = 100; // 2 decimals
+          // let precision = 100; // 2 decimals
           let random1 = Math.random();
           let random2 = Math.random();
-          if (alert.type === 'health') {
-            healthAlerts.push(
-              {
-                markerOffset: -10,
-                name: alert.name,
-                coordinates: [(parseFloat(country.coordinates.lon) + random1).toString(), (parseFloat(country.coordinates.lat) + random2).toString()],
-                colour: markerColours[alert.type]
-              }
-            )
+          if (alert.type === "health") {
+            healthAlerts.push({
+              markerOffset: -10,
+              name: alert.name,
+              coordinates: [
+                (parseFloat(country.coordinates.lon) + random1).toString(),
+                (parseFloat(country.coordinates.lat) + random2).toString(),
+              ],
+              colour: markerColours[alert.type],
+            });
           }
         }
       }
@@ -251,9 +258,9 @@ const App = () => {
           />
         </FiltersContainer>
       </MainContainer>
-      <OurMap 
-        handleOpenCountryModal={handleOpenCountryModal} 
-        weatherMarkers={weatherMarkers} 
+      <OurMap
+        handleOpenCountryModal={handleOpenCountryModal}
+        weatherMarkers={weatherMarkers}
         naturalDisastersMarkers={naturalDisastersMarkers}
         civilEventsMarkers={civilEventsMarkers}
         healthMarkers={healthMarkers}
