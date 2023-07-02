@@ -151,7 +151,7 @@ for (const country of countries) {
         if (err) {
           console.error('Error writing to file:', err);
         } else {
-          console.log('JSON file updated successfully');
+          // console.log('JSON file updated successfully');
         }
       });
     })

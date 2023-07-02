@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { Tooltip } from "@mui/material";
 import {
   ComposableMap,
   Geographies,
@@ -6,22 +6,24 @@ import {
   Marker,
   Sphere,
   Graticule,
-} from 'react-simple-maps';
-import { Tooltip } from "react-tooltip";
+} from "react-simple-maps";
 
-const OurMap = ({ handleOpenCountryModal, weatherMarkers, naturalDisastersMarkers, civilEventsMarkers, healthMarkers }) => {
-  
-  const [tooltipContent, setTooltipContent] = useState("");
-
-  const getCountryCoords = async (countryName) => {
-    const res = await fetch(`http://localhost:3000/encode/${countryName}`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const nutz = await res.json();
-    return nutz;
-  };
+const OurMap = ({
+  handleOpenCountryModal,
+  weatherMarkers,
+  naturalDisastersMarkers,
+  civilEventsMarkers,
+  healthMarkers,
+}) => {
+  //   const getCountryCoords = async (countryName) => {
+  //     const res = await fetch(`http://localhost:3000/encode/${countryName}`, {
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     });
+  //     const nutz = await res.json();
+  //     return nutz;
+  //   };
 
   const geoUrl =
     "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
@@ -43,7 +45,6 @@ const OurMap = ({ handleOpenCountryModal, weatherMarkers, naturalDisastersMarker
       }}
     >
       <div style={{ width: "1500px" }}>
-        <Tooltip>{tooltipContent}</Tooltip>
         <ComposableMap
           data-tip=""
           fill="black"
@@ -59,33 +60,29 @@ const OurMap = ({ handleOpenCountryModal, weatherMarkers, naturalDisastersMarker
                 // const isClicked = clickedCountry === geo.properties.name;
                 return (
                   <>
-                    <Geography
-                      key={geo.rsmKey}
-                      stroke="#b1b1b1"
-                      strokeWidth={0.5}
-                      geography={geo}
-                      style={{
-                        default: {
-                          fill: "white",
-                          outline: "none",
-                        },
-                        hover: {
-                          fill: "#578653",
-                          outline: "none",
-                        },
-                        pressed: {
-                          fill: "#578653",
-                          outline: "none",
-                        },
-                      }}
-                      onClick={() => handleClick(geo)}
-                      onMouseEnter={() => {
-                        setTooltipContent(`${geo.properties.name}`);
-                      }}
-                      onMouseLeave={() => {
-                        setTooltipContent("");
-                      }}
-                    />
+                    <Tooltip title={geo.properties.name} placement="bottom">
+                      <Geography
+                        key={geo.rsmKey}
+                        stroke="#b1b1b1"
+                        strokeWidth={0.5}
+                        geography={geo}
+                        style={{
+                          default: {
+                            fill: "white",
+                            outline: "none",
+                          },
+                          hover: {
+                            fill: "#578653",
+                            outline: "none",
+                          },
+                          pressed: {
+                            fill: "#578653",
+                            outline: "none",
+                          },
+                        }}
+                        onClick={() => handleClick(geo)}
+                      />
+                    </Tooltip>
                   </>
                 );
               })
@@ -107,38 +104,42 @@ const OurMap = ({ handleOpenCountryModal, weatherMarkers, naturalDisastersMarker
               </text>
             </Marker>
           ))}
-          {naturalDisastersMarkers.map(({ name, coordinates, markerOffset, colour }) => (
-            <Marker key={name} coordinates={coordinates}>
-              <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
-              <text
-                textAnchor="middle"
-                y={markerOffset}
-                style={{
-                  fontSize: "0.4rem",
-                  fontFamily: "Monserrat",
-                  fill: "#5D5A6D",
-                }}
-              >
-                {name}
-              </text>
-            </Marker>
-          ))}
-          {civilEventsMarkers.map(({ name, coordinates, markerOffset, colour }) => (
-            <Marker key={name} coordinates={coordinates}>
-              <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
-              <text
-                textAnchor="middle"
-                y={markerOffset}
-                style={{
-                  fontSize: "0.4rem",
-                  fontFamily: "Monserrat",
-                  fill: "#5D5A6D",
-                }}
-              >
-                {name}
-              </text>
-            </Marker>
-          ))}
+          {naturalDisastersMarkers.map(
+            ({ name, coordinates, markerOffset, colour }) => (
+              <Marker key={name} coordinates={coordinates}>
+                <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
+                <text
+                  textAnchor="middle"
+                  y={markerOffset}
+                  style={{
+                    fontSize: "0.4rem",
+                    fontFamily: "Monserrat",
+                    fill: "#5D5A6D",
+                  }}
+                >
+                  {name}
+                </text>
+              </Marker>
+            )
+          )}
+          {civilEventsMarkers.map(
+            ({ name, coordinates, markerOffset, colour }) => (
+              <Marker key={name} coordinates={coordinates}>
+                <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
+                <text
+                  textAnchor="middle"
+                  y={markerOffset}
+                  style={{
+                    fontSize: "0.4rem",
+                    fontFamily: "Monserrat",
+                    fill: "#5D5A6D",
+                  }}
+                >
+                  {name}
+                </text>
+              </Marker>
+            )
+          )}
           {healthMarkers.map(({ name, coordinates, markerOffset, colour }) => (
             <Marker key={name} coordinates={coordinates}>
               <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
