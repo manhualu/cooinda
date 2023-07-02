@@ -47,7 +47,7 @@ const App = () => {
   const [healthMarkers, setHealthMarkers] = useState([]);
 
   const handleOpenCountryModal = (newCountry) => {
-    if (newCountry) {
+    if (newCountry !== '') {
       setCountry(newCountry);
       setOpenCountrymodal(true);
     }
