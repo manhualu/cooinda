@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -6,12 +6,11 @@ import {
   Marker,
   Sphere,
   Graticule,
-} from "react-simple-maps";
+} from 'react-simple-maps';
 import { Tooltip } from "react-tooltip";
 
-const OurMap = ({ handleOpenCountryModal }) => {
-  const [clickedCountry, setClickedCountry] = useState("");
-  const [markers, setMarkers] = useState([]);
+const OurMap = ({ handleOpenCountryModal, weatherMarkers, naturalDisastersMarkers, civilEventsMarkers, healthMarkers }) => {
+  
   const [tooltipContent, setTooltipContent] = useState("");
 
   const getCountryCoords = async (countryName) => {
@@ -28,17 +27,7 @@ const OurMap = ({ handleOpenCountryModal }) => {
     "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
   const handleClick = async (geo) => {
-    setClickedCountry(geo.properties.name);
-    const coords = await getCountryCoords(geo.properties.name);
-    // setMarkers([
-    //   {
-    //     markerOffset: -10,
-    //     name: geo.properties.name,
-    //     coordinates: [coords.lon, coords.lat],
-    //   },
-    // ]);
     handleOpenCountryModal(geo.properties.name);
-    setClickedCountry("");
   };
 
   return (
@@ -102,14 +91,62 @@ const OurMap = ({ handleOpenCountryModal }) => {
               })
             }
           </Geographies>
-          {markers.map(({ name, coordinates, markerOffset }) => (
+          {weatherMarkers.map(({ name, coordinates, markerOffset, colour }) => (
             <Marker key={name} coordinates={coordinates}>
-              <circle r={3} fill="#1e5220" stroke="#fff" strokeWidth={1} />
+              <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
               <text
                 textAnchor="middle"
                 y={markerOffset}
                 style={{
-                  fontSize: "0.6rem",
+                  fontSize: "0.4rem",
+                  fontFamily: "Monserrat",
+                  fill: "#5D5A6D",
+                }}
+              >
+                {name}
+              </text>
+            </Marker>
+          ))}
+          {naturalDisastersMarkers.map(({ name, coordinates, markerOffset, colour }) => (
+            <Marker key={name} coordinates={coordinates}>
+              <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
+              <text
+                textAnchor="middle"
+                y={markerOffset}
+                style={{
+                  fontSize: "0.4rem",
+                  fontFamily: "Monserrat",
+                  fill: "#5D5A6D",
+                }}
+              >
+                {name}
+              </text>
+            </Marker>
+          ))}
+          {civilEventsMarkers.map(({ name, coordinates, markerOffset, colour }) => (
+            <Marker key={name} coordinates={coordinates}>
+              <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
+              <text
+                textAnchor="middle"
+                y={markerOffset}
+                style={{
+                  fontSize: "0.4rem",
+                  fontFamily: "Monserrat",
+                  fill: "#5D5A6D",
+                }}
+              >
+                {name}
+              </text>
+            </Marker>
+          ))}
+          {healthMarkers.map(({ name, coordinates, markerOffset, colour }) => (
+            <Marker key={name} coordinates={coordinates}>
+              <circle r={3} fill={colour} stroke="#fff" strokeWidth={1} />
+              <text
+                textAnchor="middle"
+                y={markerOffset}
+                style={{
+                  fontSize: "0.4rem",
                   fontFamily: "Monserrat",
                   fill: "#5D5A6D",
                 }}
