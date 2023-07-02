@@ -1,268 +1,572 @@
 [
-    {
-        "name":"Cuba",
-        "disaster":[{"name":"Floods","date":"Jun 2023"}],
-        "capital":"Havana (pop. 11326616)",
-        "languages":"Spanish",
-        "coordinates":{"lat":"23.0131338","lon":"-80.8328748"}
-    },
-    {
-        "name":"Philippines",
-        "disaster":[{"name":"Mayon Volcano","date":"Jun 2023"}],
-        "capital":"Manila (pop. 109581085)",
-        "languages":"English, Filipino",
-        "coordinates":{"lat":"12.7503486","lon":"122.7312101"}
-    },
-    {
-        "name":"Nepal",
-        "disaster":[{"name":"Dengue Outbreak","date":"Jun 2023"}],
-        "capital":"Kathmandu (pop. 29136808)",
-        "languages":"Nepali",
-        "coordinates":{"lat":"28.1083929","lon":"84.0917139"}
-    },
-    {
-        "name":"Ecuador",
-        "disaster":[{"name":"Floods","date":"Jun 2023"}],
-        "capital":"Quito (pop. 17643060)",
-        "languages":"Spanish",
-        "coordinates":{"lat":"-1.3397668","lon":"-79.3666965"}
-    },
-    {
-        "name":"Haiti",
-        "disaster":[{"name":"Floods and Landslides","date":"Jun 2023"}],
-        "capital":"Port-au-Prince (pop. 11402533)",
-        "languages":"French, Haitian Creole",
-        "coordinates":{"lat":"19.1399952","lon":"-72.3570972"}
-    },
-    {
-        "name":"Dominican Republic",
-        "disaster":[{"name":"Floods","date":"Jun 2023"}],
-        "capital":"Santo Domingo (pop. 10847904)",
-        "languages":"Spanish",
-        "coordinates":{"lat":"19.0974031","lon":"-70.3028026"}
-    },
-    {
-        "name":"Argentina",
-        "disaster":[{"name":"Floods","date":"Jun 2023"}],
-        "capital":"Buenos Aires (pop. 45376763)",
-        "languages":"Guaraní, Spanish",
-        "coordinates":{"lat":"-34.9964963","lon":"-64.9672817"}
-    },
-    {
-        "name":"Italy",
-        "disaster":[{"name":"Floods","date":"May 2023"}],
-        "capital":"Rome (pop. 59554023)",
-        "languages":"Italian",
-        "coordinates":{"lat":"42.6384261","lon":"12.674297"}
-    },
-    {
-        "name":"Mongolia",
-        "disaster":[{"name":"Cold Wave","date":"May 2023"}],
-        "capital":"Ulan Bator (pop. 3278292)",
-        "languages":"Mongolian",
-        "coordinates":{"lat":"46.8250388","lon":"103.8499736"}
-    },
-    {
-        "name":"Gabon",
-        "disaster":[{"name":"Severe Local Storm","date":"May 2023"}],
-        "capital":"Libreville (pop. 2225728)",
-        "languages":"French",
-        "coordinates":{"lat":"-0.8999695","lon":"11.6899699"}
-    },
-    {
-        "name":"Bosnia and Herzegovina",
-        "disaster":[{"name":"Floods","date":"May 2023"}],
-        "capital":"Sarajevo (pop. 3280815)",
-        "languages":"Bosnian, Croatian, Serbian",
-        "coordinates":{"lat":"44.3053476","lon":"17.5961467"}
-    },
-    {
-        "name":"Sri Lanka",
-        "disaster":[{"name":"Dengue Outbreak","date":"May 2023"}],
-        "capital":"Sri Jayawardenepura Kotte (pop. 21919000)",
-        "languages":"Sinhala, Tamil",
-        "coordinates":{"lat":"7.5554942","lon":"80.7137847"}
-    },
-    {
-        "name":"Afghanistan",
-        "disaster":[{"name":"Locust Infestation","date":"May 2023"}],
-        "capital":"Kabul (pop. 40218234)",
-        "languages":"Dari, Pashto, Turkmen",
-        "coordinates":{"lat":"33.7680065","lon":"66.2385139"}
-    },
-    {
-        "name":"DR Congo",
-        "disaster":[{"name":"Floods and Landslides","date":"May 2023"}],
-        "capital":"Kinshasa (pop. 89561404)",
-        "languages":"French, Kikongo, Lingala, Tshiluba, Swahili",
-        "coordinates":{"lat":"-2.9814344","lon":"23.8222636"}
-    },
-    {
-        "name":"Rwanda",
-        "disaster":[{"name":"Floods and Landslides","date":"May 2023"}],
-        "capital":"Kigali (pop. 12952209)",
-        "languages":"English, French, Kinyarwanda",
-        "coordinates":{"lat":"-1.9646631","lon":"30.0644358"}
-    },
-    {
-        "name":"Colombia",
-        "disaster":[{"name":"Nevado del Ruiz Volcano","date":"Apr 2023"}],
-        "capital":"Bogotá (pop. 50882884)",
-        "languages":"Spanish",
-        "coordinates":{"lat":"4.099917","lon":"-72.9088133"}
-    },
-    {
-        "name":"Yemen",
-        "disaster":[{"name":"Floods","date":"Apr 2023"}],
-        "capital":"Sana'a (pop. 29825968)",
-        "languages":"Arabic",
-        "coordinates":{"lat":"16.3471243","lon":"47.8915271"}
-    },
-    {
-        "name":"Tanzania",
-        "disaster":[{"name":"Floods","date":"Apr 2023"}],
-        "capital":"Dodoma (pop. 59734213)",
-        "languages":"English, Swahili",
-        "coordinates":{"lat":"-6.5247123","lon":"35.7878438"}
-    },
-    {
-        "name":"Kenya",
-        "disaster":[{"name":"Floods","date":"Mar 2023"}],
-        "capital":"Nairobi (pop. 53771300)",
-        "languages":"English, Swahili",
-        "coordinates":{"lat":"1.4419683","lon":"38.4313975"}
-    },
-    {
-        "name":"Cameroon",
-        "disaster":[{"name":"Floods","date":"Mar 2023"}],
-        "capital":"Yaoundé (pop. 26545864)",
-        "languages":"English, French",
-        "coordinates":{"lat":"4.6125522","lon":"13.1535811"}
-    },
-    {
-        "name":"Türkiye",
-        "disaster":[{"name":"Floods","date":"Mar 2023"}],
-        "capital":"Ankara (pop. 84339067)",
-        "languages":"Turkish",
-        "coordinates":{"lat":"38.9597594","lon":"34.9249653"}
-    },
-    {
-        "name":"Somalia",
-        "disaster":[{"name":"Floods","date":"Mar 2023"}],
-        "capital":"Mogadishu (pop. 15893219)",
-        "languages":"Arabic, Somali",
-        "coordinates":{"lat":"8.3676771","lon":"49.083416"}
-    },
-    {
-        "name":"Peru",
-        "disaster":[{"name":"Floods and Landslides","date":"Mar 2023"}],
-        "capital":"Lima (pop. 32971846)",
-        "languages":"Aymara, Quechua, Spanish",
-        "coordinates":{"lat":"-6.8699697","lon":"-75.0458515"}
-    },
-    {
-        "name":"Bangladesh",
-        "disaster":[{"name":"Cox's Bazar Camp Settlement Fire","date":"Mar 2023"}],
-        "capital":"Dhaka (pop. 164689383)",
-        "languages":"Bengali",
-        "coordinates":{"lat":"24.4769288","lon":"90.2934413"}
-    },
-    {
-        "name":"Ethiopia",
-        "disaster":[{"name":"Floods","date":"Mar 2023"}],
-        "capital":"Addis Ababa (pop. 114963583)",
-        "languages":"Amharic",
-        "coordinates":{"lat":"10.2116702","lon":"38.6521203"}
-    },
-    {
-        "name":"Zimbabwe",
-        "disaster":[{"name":"Cholera Outbreak","date":"Feb 2023"}],
-        "capital":"Harare (pop. 14862927)",
-        "languages":"Chibarwe, English, Kalanga, Khoisan, Ndau, Northern Ndebele, Chewa, Shona, Sotho, Tonga, Tswana, Tsonga, Venda, Xhosa, Zimbabwean Sign Language",
-        "coordinates":{"lat":"-18.4554963","lon":"29.7468414"}
-    },
-    {
-        "name":"Mozambique",
-        "disaster":[{"name":"Floods","date":"Feb 2023"}],
-        "capital":"Maputo (pop. 31255435)",
-        "languages":"Portuguese",
-        "coordinates":{"lat":"-19.302233","lon":"34.9144977"}
-    },
-    {
-        "name":"Zambia",
-        "disaster":[{"name":"Cholera Outbreak","date":"Jan 2023"}],
-        "capital":"Lusaka (pop. 18383956)",
-        "languages":"English",
-        "coordinates":{"lat":"-14.5189121","lon":"27.5589884"}
-    },
-    {
-        "name":"Nigeria",
-        "disaster":[{"name":"Lassa Fever Outbreak","date":"Jan 2023"}],
-        "capital":"Abuja (pop. 206139587)",
-        "languages":"English",
-        "coordinates":{"lat":"9.6000359","lon":"7.9999721"}
-    },
-    {
-        "name":"Burundi",
-        "disaster":[{"name":"Cholera Outbreak","date":"Jan 2023"}],
-        "capital":"Gitega (pop. 11890781)",
-        "languages":"French, Kirundi",
-        "coordinates":{"lat":"-3.426449","lon":"29.9324519"}
-    },
-    {
-        "name":"South Sudan",
-        "disaster":[{"name":"Measles","date":"Dec 2022"}],
-        "capital":"Juba (pop. 11193729)",
-        "languages":"English",
-        "coordinates":{"lat":"7.8699431","lon":"29.6667897"}
-    },
-    {
-        "name":"Syria",
-        "disaster":[{"name":"Cholera Outbreak","date":"Aug 2022"}],
-        "capital":"Damascus (pop. 17500657)",
-        "languages":"Arabic",
-        "coordinates":{"lat":"34.6401861","lon":"39.0494106"}
-    },
-    {
-        "name":"Chad",
-        "disaster":[{"name":"Floods","date":"Jul 2022"}],
-        "capital":"N'Djamena (pop. 16425859)",
-        "languages":"Arabic, French",
-        "coordinates":{"lat":"15.6134137","lon":"19.0156172"}
-    },
-    {
-        "name":"Pakistan",
-        "disaster":[{"name":"Floods","date":"Jul 2022"}],
-        "capital":"Islamabad (pop. 220892331)",
-        "languages":"English, Urdu",
-        "coordinates":{"lat":"30.3308401","lon":"71.247499"}
-    },
-    {
-        "name":"Sudan",
-        "disaster":[{"name":"Floods","date":"Jun 2022"}],
-        "capital":"Juba (pop. 11193729)",
-        "languages":"English",
-        "coordinates":{"lat":"14.5844444","lon":"29.4917691"}
-    },
-    {
-        "name":"Niger",
-        "disaster":[{"name":"Drought","date":"May 2022"}],
-        "capital":"Abuja (pop. 206139587)",
-        "languages":"English",
-        "coordinates":{"lat":"17.7356214","lon":"9.3238432"}
-    },
-    {
-        "name":"Djibouti",
-        "disaster":[{"name":"Drought","date":"Mar 2022"}],
-        "capital":"Djibouti (pop. 988002)",
-        "languages":"Arabic, French",
-        "coordinates":{"lat":"11.8145966","lon":"42.8453061"}
-    },
-    {
-        "name":"Malawi",
-        "disaster":[{"name":"Cholera Outbreak","date":"Mar 2022"}],
-        "capital":"Lilongwe (pop. 19129955)",
-        "languages":"English, Chewa",
-        "coordinates":{"lat":"-13.2687204","lon":"33.9301963"}
+  {
+    "name": "Cuba",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Jun 2023"
+      }
+    ],
+    "capital": "Havana (pop. 11326616)",
+    "languages": "Spanish",
+    "coordinates": {
+      "lat": "23.0131338",
+      "lon": "-80.8328748"
     }
+  },
+  {
+    "name": "Philippines",
+    "disaster": [
+      {
+        "name": "Mayon Volcano",
+        "date": "Jun 2023"
+      }
+    ],
+    "capital": "Manila (pop. 109581085)",
+    "languages": "English, Filipino",
+    "coordinates": {
+      "lat": "12.7503486",
+      "lon": "122.7312101"
+    }
+  },
+  {
+    "name": "Nepal",
+    "disaster": [
+      {
+        "name": "Dengue Outbreak",
+        "date": "Jun 2023"
+      }
+    ],
+    "capital": "Kathmandu (pop. 29136808)",
+    "languages": "Nepali",
+    "coordinates": {
+      "lat": "28.1083929",
+      "lon": "84.0917139"
+    }
+  },
+  {
+    "name": "Ecuador",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Jun 2023"
+      }
+    ],
+    "capital": "Quito (pop. 17643060)",
+    "languages": "Spanish",
+    "coordinates": {
+      "lat": "-1.3397668",
+      "lon": "-79.3666965"
+    }
+  },
+  {
+    "name": "Haiti",
+    "disaster": [
+      {
+        "name": "Floods and Landslides",
+        "date": "Jun 2023"
+      }
+    ],
+    "capital": "Port-au-Prince (pop. 11402533)",
+    "languages": "French, Haitian Creole",
+    "coordinates": {
+      "lat": "19.1399952",
+      "lon": "-72.3570972"
+    }
+  },
+  {
+    "name": "Dominican Republic",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Jun 2023"
+      }
+    ],
+    "capital": "Santo Domingo (pop. 10847904)",
+    "languages": "Spanish",
+    "coordinates": {
+      "lat": "19.0974031",
+      "lon": "-70.3028026"
+    }
+  },
+  {
+    "name": "Argentina",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Jun 2023"
+      }
+    ],
+    "capital": "Buenos Aires (pop. 45376763)",
+    "languages": "Guaran\u00ed, Spanish",
+    "coordinates": {
+      "lat": "-34.9964963",
+      "lon": "-64.9672817"
+    }
+  },
+  {
+    "name": "Italy",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "May 2023"
+      }
+    ],
+    "capital": "Rome (pop. 59554023)",
+    "languages": "Italian",
+    "coordinates": {
+      "lat": "42.6384261",
+      "lon": "12.674297"
+    }
+  },
+  {
+    "name": "Mongolia",
+    "disaster": [
+      {
+        "name": "Cold Wave",
+        "date": "May 2023"
+      }
+    ],
+    "capital": "Ulan Bator (pop. 3278292)",
+    "languages": "Mongolian",
+    "coordinates": {
+      "lat": "46.8250388",
+      "lon": "103.8499736"
+    }
+  },
+  {
+    "name": "Gabon",
+    "disaster": [
+      {
+        "name": "Severe Local Storm",
+        "date": "May 2023"
+      }
+    ],
+    "capital": "Libreville (pop. 2225728)",
+    "languages": "French",
+    "coordinates": {
+      "lat": "-0.8999695",
+      "lon": "11.6899699"
+    }
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "May 2023"
+      }
+    ],
+    "capital": "Sarajevo (pop. 3280815)",
+    "languages": "Bosnian, Croatian, Serbian",
+    "coordinates": {
+      "lat": "44.3053476",
+      "lon": "17.5961467"
+    }
+  },
+  {
+    "name": "Sri Lanka",
+    "disaster": [
+      {
+        "name": "Dengue Outbreak",
+        "date": "May 2023"
+      }
+    ],
+    "capital": "Sri Jayawardenepura Kotte (pop. 21919000)",
+    "languages": "Sinhala, Tamil",
+    "coordinates": {
+      "lat": "7.5554942",
+      "lon": "80.7137847"
+    }
+  },
+  {
+    "name": "Afghanistan",
+    "disaster": [
+      {
+        "name": "Locust Infestation",
+        "date": "May 2023"
+      }
+    ],
+    "capital": "Kabul (pop. 40218234)",
+    "languages": "Dari, Pashto, Turkmen",
+    "coordinates": {
+      "lat": "33.7680065",
+      "lon": "66.2385139"
+    }
+  },
+  {
+    "name": "DR Congo",
+    "disaster": [
+      {
+        "name": "Floods and Landslides",
+        "date": "May 2023"
+      }
+    ],
+    "capital": "Kinshasa (pop. 89561404)",
+    "languages": "French, Kikongo, Lingala, Tshiluba, Swahili",
+    "coordinates": {
+      "lat": "-2.9814344",
+      "lon": "23.8222636"
+    }
+  },
+  {
+    "name": "Rwanda",
+    "disaster": [
+      {
+        "name": "Floods and Landslides",
+        "date": "May 2023"
+      }
+    ],
+    "capital": "Kigali (pop. 12952209)",
+    "languages": "English, French, Kinyarwanda",
+    "coordinates": {
+      "lat": "-1.9646631",
+      "lon": "30.0644358"
+    }
+  },
+  {
+    "name": "Colombia",
+    "disaster": [
+      {
+        "name": "Nevado del Ruiz Volcano",
+        "date": "Apr 2023"
+      }
+    ],
+    "capital": "Bogot\u00e1 (pop. 50882884)",
+    "languages": "Spanish",
+    "coordinates": {
+      "lat": "4.099917",
+      "lon": "-72.9088133"
+    }
+  },
+  {
+    "name": "Yemen",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Apr 2023"
+      }
+    ],
+    "capital": "Sana'a (pop. 29825968)",
+    "languages": "Arabic",
+    "coordinates": {
+      "lat": "16.3471243",
+      "lon": "47.8915271"
+    }
+  },
+  {
+    "name": "Tanzania",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Apr 2023"
+      }
+    ],
+    "capital": "Dodoma (pop. 59734213)",
+    "languages": "English, Swahili",
+    "coordinates": {
+      "lat": "-6.5247123",
+      "lon": "35.7878438"
+    }
+  },
+  {
+    "name": "Kenya",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Mar 2023"
+      }
+    ],
+    "capital": "Nairobi (pop. 53771300)",
+    "languages": "English, Swahili",
+    "coordinates": {
+      "lat": "1.4419683",
+      "lon": "38.4313975"
+    }
+  },
+  {
+    "name": "Cameroon",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Mar 2023"
+      }
+    ],
+    "capital": "Yaound\u00e9 (pop. 26545864)",
+    "languages": "English, French",
+    "coordinates": {
+      "lat": "4.6125522",
+      "lon": "13.1535811"
+    }
+  },
+  {
+    "name": "T\u00fcrkiye",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Mar 2023"
+      }
+    ],
+    "capital": "Ankara (pop. 84339067)",
+    "languages": "Turkish",
+    "coordinates": {
+      "lat": "38.9597594",
+      "lon": "34.9249653"
+    }
+  },
+  {
+    "name": "Somalia",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Mar 2023"
+      }
+    ],
+    "capital": "Mogadishu (pop. 15893219)",
+    "languages": "Arabic, Somali",
+    "coordinates": {
+      "lat": "8.3676771",
+      "lon": "49.083416"
+    }
+  },
+  {
+    "name": "Peru",
+    "disaster": [
+      {
+        "name": "Floods and Landslides",
+        "date": "Mar 2023"
+      }
+    ],
+    "capital": "Lima (pop. 32971846)",
+    "languages": "Aymara, Quechua, Spanish",
+    "coordinates": {
+      "lat": "-6.8699697",
+      "lon": "-75.0458515"
+    }
+  },
+  {
+    "name": "Bangladesh",
+    "disaster": [
+      {
+        "name": "Cox's Bazar Camp Settlement Fire",
+        "date": "Mar 2023"
+      }
+    ],
+    "capital": "Dhaka (pop. 164689383)",
+    "languages": "Bengali",
+    "coordinates": {
+      "lat": "24.4769288",
+      "lon": "90.2934413"
+    }
+  },
+  {
+    "name": "Ethiopia",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Mar 2023"
+      }
+    ],
+    "capital": "Addis Ababa (pop. 114963583)",
+    "languages": "Amharic",
+    "coordinates": {
+      "lat": "10.2116702",
+      "lon": "38.6521203"
+    }
+  },
+  {
+    "name": "Zimbabwe",
+    "disaster": [
+      {
+        "name": "Cholera Outbreak",
+        "date": "Feb 2023"
+      }
+    ],
+    "capital": "Harare (pop. 14862927)",
+    "languages": "Chibarwe, English, Kalanga, Khoisan, Ndau, Northern Ndebele, Chewa, Shona, Sotho, Tonga, Tswana, Tsonga, Venda, Xhosa, Zimbabwean Sign Language",
+    "coordinates": {
+      "lat": "-18.4554963",
+      "lon": "29.7468414"
+    }
+  },
+  {
+    "name": "Mozambique",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Feb 2023"
+      }
+    ],
+    "capital": "Maputo (pop. 31255435)",
+    "languages": "Portuguese",
+    "coordinates": {
+      "lat": "-19.302233",
+      "lon": "34.9144977"
+    }
+  },
+  {
+    "name": "Zambia",
+    "disaster": [
+      {
+        "name": "Cholera Outbreak",
+        "date": "Jan 2023"
+      }
+    ],
+    "capital": "Lusaka (pop. 18383956)",
+    "languages": "English",
+    "coordinates": {
+      "lat": "-14.5189121",
+      "lon": "27.5589884"
+    }
+  },
+  {
+    "name": "Nigeria",
+    "disaster": [
+      {
+        "name": "Lassa Fever Outbreak",
+        "date": "Jan 2023"
+      }
+    ],
+    "capital": "Abuja (pop. 206139587)",
+    "languages": "English",
+    "coordinates": {
+      "lat": "9.6000359",
+      "lon": "7.9999721"
+    }
+  },
+  {
+    "name": "Burundi",
+    "disaster": [
+      {
+        "name": "Cholera Outbreak",
+        "date": "Jan 2023"
+      }
+    ],
+    "capital": "Gitega (pop. 11890781)",
+    "languages": "French, Kirundi",
+    "coordinates": {
+      "lat": "-3.426449",
+      "lon": "29.9324519"
+    }
+  },
+  {
+    "name": "South Sudan",
+    "disaster": [
+      {
+        "name": "Measles",
+        "date": "Dec 2022"
+      }
+    ],
+    "capital": "Juba (pop. 11193729)",
+    "languages": "English",
+    "coordinates": {
+      "lat": "7.8699431",
+      "lon": "29.6667897"
+    }
+  },
+  {
+    "name": "Syria",
+    "disaster": [
+      {
+        "name": "Cholera Outbreak",
+        "date": "Aug 2022"
+      }
+    ],
+    "capital": "Damascus (pop. 17500657)",
+    "languages": "Arabic",
+    "coordinates": {
+      "lat": "34.6401861",
+      "lon": "39.0494106"
+    }
+  },
+  {
+    "name": "Chad",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Jul 2022"
+      }
+    ],
+    "capital": "N'Djamena (pop. 16425859)",
+    "languages": "Arabic, French",
+    "coordinates": {
+      "lat": "15.6134137",
+      "lon": "19.0156172"
+    }
+  },
+  {
+    "name": "Pakistan",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Jul 2022"
+      }
+    ],
+    "capital": "Islamabad (pop. 220892331)",
+    "languages": "English, Urdu",
+    "coordinates": {
+      "lat": "30.3308401",
+      "lon": "71.247499"
+    }
+  },
+  {
+    "name": "Sudan",
+    "disaster": [
+      {
+        "name": "Floods",
+        "date": "Jun 2022"
+      }
+    ],
+    "capital": "Juba (pop. 11193729)",
+    "languages": "English",
+    "coordinates": {
+      "lat": "14.5844444",
+      "lon": "29.4917691"
+    }
+  },
+  {
+    "name": "Niger",
+    "disaster": [
+      {
+        "name": "Drought",
+        "date": "May 2022"
+      }
+    ],
+    "capital": "Abuja (pop. 206139587)",
+    "languages": "English",
+    "coordinates": {
+      "lat": "17.7356214",
+      "lon": "9.3238432"
+    }
+  },
+  {
+    "name": "Djibouti",
+    "disaster": [
+      {
+        "name": "Drought",
+        "date": "Mar 2022"
+      }
+    ],
+    "capital": "Djibouti (pop. 988002)",
+    "languages": "Arabic, French",
+    "coordinates": {
+      "lat": "11.8145966",
+      "lon": "42.8453061"
+    }
+  },
+  {
+    "name": "Malawi",
+    "disaster": [
+      {
+        "name": "Cholera Outbreak",
+        "date": "Mar 2022"
+      }
+    ],
+    "capital": "Lilongwe (pop. 19129955)",
+    "languages": "English, Chewa",
+    "coordinates": {
+      "lat": "-13.2687204",
+      "lon": "33.9301963"
+    }
+  }
 ]

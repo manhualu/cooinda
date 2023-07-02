@@ -1,9 +1,26 @@
 [
   {
     "name": "Cuba",
+    "description": "Cuba, officially the Republic of Cuba (Spanish: República de Cuba), is an island country comprising the island of Cuba, as well as Isla de la Juventud and several minor archipelagos. ",
+    "weather": {
+      "temp": 26,
+      "tempMin": 33,
+      "tempMax": 22,
+      "description": "cloudy"
+    },
     "alerts": [
       {
         "name": "Floods",
+        "date": "Jun 2023",
+        "type": "natural"
+      },
+      {
+        "name": "3.1 Magnitude Earthquake",
+        "date": "Jun 2023",
+        "type": "natural"
+      },
+      {
+        "name": "Earthquake",
         "date": "Jun 2023",
         "type": "natural"
       }
@@ -13,10 +30,17 @@
     "coordinates": {
       "lat": "23.0131338",
       "lon": "-80.8328748"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Philippines",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Mayon Volcano",
@@ -29,10 +53,17 @@
     "coordinates": {
       "lat": "12.7503486",
       "lon": "122.7312101"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Nepal",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Dengue Outbreak",
@@ -45,10 +76,17 @@
     "coordinates": {
       "lat": "28.1083929",
       "lon": "84.0917139"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Ecuador",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Floods",
@@ -61,10 +99,17 @@
     "coordinates": {
       "lat": "-1.3397668",
       "lon": "-79.3666965"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Haiti",
+        "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Floods and Landslides",
@@ -77,10 +122,17 @@
     "coordinates": {
       "lat": "19.1399952",
       "lon": "-72.3570972"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Dominican Republic",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Floods",
@@ -93,10 +145,17 @@
     "coordinates": {
       "lat": "19.0974031",
       "lon": "-70.3028026"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Argentina",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Floods",
@@ -109,14 +168,27 @@
     "coordinates": {
       "lat": "-34.9964963",
       "lon": "-64.9672817"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Italy",
+    "description": "Italy (Italian: Italia), officially the Italian Republic or the Republic of Italy, is a country in Southern and Western Europe.",
+    "weather": {
+      "temp": 21,
+      "tempMin": 29,
+      "tempMax": 20,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Floods",
         "date": "May 2023",
+        "type": "natural"
+      },
+      {
+        "name": "4.3 Magnitude Earthquake",
+        "date": "June 2023",
         "type": "natural"
       }
     ],
@@ -125,10 +197,17 @@
     "coordinates": {
       "lat": "42.6384261",
       "lon": "12.674297"
-    }
+    },
+    "img": "https://nomadparadise.com/wp-content/uploads/2022/09/places-to-visit-italy-10-1024x683.jpg"
   },
   {
     "name": "Mongolia",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Cold Wave",
@@ -141,7 +220,8 @@
     "coordinates": {
       "lat": "46.8250388",
       "lon": "103.8499736"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Gabon",
@@ -157,10 +237,17 @@
     "coordinates": {
       "lat": "-0.8999695",
       "lon": "11.6899699"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Bosnia and Herzegovina",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Floods",
@@ -173,10 +260,17 @@
     "coordinates": {
       "lat": "44.3053476",
       "lon": "17.5961467"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Sri Lanka",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Dengue Outbreak",
@@ -189,10 +283,17 @@
     "coordinates": {
       "lat": "7.5554942",
       "lon": "80.7137847"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Afghanistan",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Locust Infestation",
@@ -205,7 +306,8 @@
     "coordinates": {
       "lat": "33.7680065",
       "lon": "66.2385139"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "DR Congo",
@@ -221,7 +323,8 @@
     "coordinates": {
       "lat": "-2.9814344",
       "lon": "23.8222636"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Rwanda",
@@ -237,7 +340,8 @@
     "coordinates": {
       "lat": "-1.9646631",
       "lon": "30.0644358"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Colombia",
@@ -253,10 +357,17 @@
     "coordinates": {
       "lat": "4.099917",
       "lon": "-72.9088133"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Yemen",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Floods",
@@ -269,10 +380,17 @@
     "coordinates": {
       "lat": "16.3471243",
       "lon": "47.8915271"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Tanzania",
+    "weather": {
+      "temp": 18,
+      "tempMin": 24,
+      "tempMax": 12,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Floods",
@@ -285,7 +403,8 @@
     "coordinates": {
       "lat": "-6.5247123",
       "lon": "35.7878438"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Kenya",
@@ -301,7 +420,8 @@
     "coordinates": {
       "lat": "1.4419683",
       "lon": "38.4313975"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Cameroon",
@@ -317,7 +437,8 @@
     "coordinates": {
       "lat": "4.6125522",
       "lon": "13.1535811"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "T\u00fcrkiye",
@@ -333,7 +454,8 @@
     "coordinates": {
       "lat": "38.9597594",
       "lon": "34.9249653"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Somalia",
@@ -349,7 +471,8 @@
     "coordinates": {
       "lat": "8.3676771",
       "lon": "49.083416"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Peru",
@@ -365,7 +488,8 @@
     "coordinates": {
       "lat": "-6.8699697",
       "lon": "-75.0458515"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Bangladesh",
@@ -381,7 +505,8 @@
     "coordinates": {
       "lat": "24.4769288",
       "lon": "90.2934413"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Ethiopia",
@@ -397,7 +522,8 @@
     "coordinates": {
       "lat": "10.2116702",
       "lon": "38.6521203"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Zimbabwe",
@@ -413,10 +539,12 @@
     "coordinates": {
       "lat": "-18.4554963",
       "lon": "29.7468414"
-    }
+    },
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg"
   },
   {
     "name": "Mozambique",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Floods",
@@ -433,6 +561,7 @@
   },
   {
     "name": "Zambia",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Cholera Outbreak",
@@ -449,6 +578,7 @@
   },
   {
     "name": "Nigeria",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Lassa Fever Outbreak",
@@ -465,6 +595,7 @@
   },
   {
     "name": "Burundi",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Cholera Outbreak",
@@ -481,6 +612,7 @@
   },
   {
     "name": "South Sudan",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Measles",
@@ -497,6 +629,7 @@
   },
   {
     "name": "Syria",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Cholera Outbreak",
@@ -513,6 +646,7 @@
   },
   {
     "name": "Chad",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Floods",
@@ -529,6 +663,7 @@
   },
   {
     "name": "Pakistan",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Floods",
@@ -545,6 +680,7 @@
   },
   {
     "name": "Sudan",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Floods",
@@ -561,6 +697,7 @@
   },
   {
     "name": "Niger",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Drought",
@@ -577,6 +714,7 @@
   },
   {
     "name": "Djibouti",
+    "img": "https://cdn.britannica.com/98/83398-050-D7B498CD/view-Havana.jpg",
     "alerts": [
       {
         "name": "Drought",
@@ -609,11 +747,22 @@
   },
   {
     "name": "Australia",
+    "description": "Australia, officially the Commonwealth of Australia, is a sovereign country comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller islands.Australia is the largest country by area in Oceania and the world's sixth-largest country.",
+    "weather": {
+      "temp": 15,
+      "tempMin": 5,
+      "tempMax": 18,
+      "description": "clear"
+    },
     "alerts": [
       {
         "name": "Pro-LGBTQA+ Protest",
         "date": "July 2022",
         "type": "civil"
+      }, {
+        "name": "Northern Territory Floods",
+        "date": "July 2022",
+        "type": "natural"
       }
     ],
     "capital": "Canberra (pop. 26381414)",
@@ -621,7 +770,8 @@
     "coordinates": {
       "lat": "-26.26",
       "lon": "133.16"
-    }
+    },
+    "img": "https://tourscanner.com/blog/wp-content/uploads/2022/06/things-to-do-in-Sydney-Australia.jpg"
   },
   {
     "name": "Unites States of America",

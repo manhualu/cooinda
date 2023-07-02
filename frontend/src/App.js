@@ -69,8 +69,8 @@ const App = () => {
     const civilEventsAlerts = [];
     const healthAlerts = [];
     for (const country of data) {
-      let random1 = Math.random();
-      let random2 = Math.random();
+      let random1 = Math.random() * 1000;
+      let random2 = Math.random() * 1000;
       for (const alert of country.alerts) {
         if (alert.type === 'natural') {
           naturalDisastersAlerts.push(

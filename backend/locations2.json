@@ -1,1 +1,488 @@
-[{"Russian Federation":{"code":"RU","coordinates":{"lat":"64.6863136","lon":"97.7453061"}}},{"RWANDA":{"code":"RW","coordinates":{"lat":"-1.9646631","lon":"30.0644358"}}},{"Saint Kitts and Nevis":{"code":"KN","coordinates":{"lat":"17.250512","lon":"-62.6725973"}}},{"Saint Lucia":{"code":"LC","coordinates":{"lat":"13.8250489","lon":"-60.975036"}}},{"Saint Vincent and the Grenadines":{"code":"VC","coordinates":{"lat":"12.90447","lon":"-61.2765569"}}},{"Samoa":{"code":"WS","coordinates":{"lat":"-13.7693895","lon":"-172.12005"}}},{"San Marino":{"code":"SM","coordinates":{"lat":"43.9458623","lon":"12.458306"}}},{"Sao Tome and Principe":{"code":"ST","coordinates":{"lat":"0.9713095","lon":"7.02255"}}},{"Saudi Arabia":{"code":"SA","coordinates":{"lat":"25.6242618","lon":"42.3528328"}}},{"Senegal":{"code":"SN","coordinates":{"lat":"14.4750607","lon":"-14.4529612"}}},{"Serbia":{"code":"RS","coordinates":{"lat":"44.1534121","lon":"20.55144"}}},{"Seychelles":{"code":"SC","coordinates":{"lat":"-4.6574977","lon":"55.4540146"}}},{"Sierra Leone":{"code":"SL","coordinates":{"lat":"8.6400349","lon":"-11.8400269"}}},{"Singapore":{"code":"SG","coordinates":{"lat":"1.357107","lon":"103.8194992"}}},{"Slovakia":{"code":"SK","coordinates":{"lat":"48.7411522","lon":"19.4528646"}}},{"Slovenia":{"code":"SI","coordinates":{"lat":"45.8133113","lon":"14.4808369"}}},{"Solomon Islands":{"code":"SB","coordinates":{"lat":"-8.7053941","lon":"159.1070693851845"}}},{"Somalia":{"code":"SO","coordinates":{"lat":"8.3676771","lon":"49.083416"}}},{"South Africa":{"code":"ZA","coordinates":{"lat":"-28.8166236","lon":"24.991639"}}},{"South Georgia and the South Sandwich Islands":{"code":"GS","coordinates":{"lat":"-54.8432857","lon":"-35.8090698"}}},{"Spain":{"code":"ES","coordinates":{"lat":"39.3260685","lon":"-4.8379791"}}},{"Sri Lanka":{"code":"LK","coordinates":{"lat":"7.5554942","lon":"80.7137847"}}},{"Sudan":{"code":"SD","coordinates":{"lat":"14.5844444","lon":"29.4917691"}}},{"Suriname":{"code":"SR","coordinates":{"lat":"4.1413025","lon":"-56.0771187"}}},{"Swaziland":{"code":"SZ","coordinates":{"lat":"-26.5624806","lon":"31.3991317"}}},{"Sweden":{"code":"SE","coordinates":{"lat":"59.6749712","lon":"14.5208584"}}},{"Switzerland":{"code":"CH","coordinates":{"lat":"46.7985624","lon":"8.2319736"}}},{"Syrian Arab Republic":{"code":"SY","coordinates":{"lat":"34.6401861","lon":"39.0494106"}}},{"Tajikistan":{"code":"TJ","coordinates":{"lat":"38.6281733","lon":"70.8156541"}}},{"Thailand":{"code":"TH","coordinates":{"lat":"14.8971921","lon":"100.83273"}}},{"Timor-Leste":{"code":"TL","coordinates":{"lat":"-8.5151979","lon":"125.8375756"}}},{"Togo":{"code":"TG","coordinates":{"lat":"8.7800265","lon":"1.0199765"}}},{"Tokelau":{"code":"TK","coordinates":{"lat":"-9.1676396","lon":"-171.819687"}}},{"Tonga":{"code":"TO","coordinates":{"lat":"-19.9160819","lon":"-175.202642"}}},{"Trinidad and Tobago":{"code":"TT","coordinates":{"lat":"10.8677845","lon":"-60.9821067"}}},{"Tunisia":{"code":"TN","coordinates":{"lat":"33.8439408","lon":"9.400138"}}},{"Turkey":{"code":"TR","coordinates":{"lat":"38.9597594","lon":"34.9249653"}}},{"Turkmenistan":{"code":"TM","coordinates":{"lat":"39.3763807","lon":"59.3924609"}}},{"Turks and Caicos Islands":{"code":"TC","coordinates":{"lat":"21.7214683","lon":"-71.6201783"}}},{"Tuvalu":{"code":"TV","coordinates":{"lat":"-8.6405212","lon":"179.1582918181797"}}},{"Uganda":{"code":"UG","coordinates":{"lat":"1.5333554","lon":"32.2166578"}}},{"Ukraine":{"code":"UA","coordinates":{"lat":"49.4871968","lon":"31.2718321"}}},{"United Arab Emirates":{"code":"AE","coordinates":{"lat":"24.0002488","lon":"53.9994829"}}},{"United Kingdom":{"code":"GB","coordinates":{"lat":"54.7023545","lon":"-3.2765753"}}},{"United States":{"code":"US","coordinates":{"lat":"39.7837304","lon":"-100.445882"}}},{"Uruguay":{"code":"UY","coordinates":{"lat":"-32.8755548","lon":"-56.0201525"}}},{"Uzbekistan":{"code":"UZ","coordinates":{"lat":"41.32373","lon":"63.9528098"}}},{"Vanuatu":{"code":"VU","coordinates":{"lat":"-16.5255069","lon":"168.1069154"}}},{"Venezuela":{"code":"VE","coordinates":{"lat":"8.0018709","lon":"-66.1109318"}}},{"Viet Nam":{"code":"VN","coordinates":{"lat":"13.2904027","lon":"108.4265113"}}},{"Western Sahara":{"code":"EH","coordinates":{"lat":"23.340694499999998","lon":"-13.129132651166511"}}},{"Yemen":{"code":"YE","coordinates":{"lat":"16.3471243","lon":"47.8915271"}}},{"Zambia":{"code":"ZM","coordinates":{"lat":"-14.5189121","lon":"27.5589884"}}},{"Zimbabwe":{"code":"ZW","coordinates":{"lat":"-18.4554963","lon":"29.7468414"}}}]
+[
+    {
+      "Russian Federation": {
+        "code": "RU",
+        "coordinates": {
+          "lat": "64.6863136",
+          "lon": "97.7453061"
+        }
+      }
+    },
+    {
+      "RWANDA": {
+        "code": "RW",
+        "coordinates": {
+          "lat": "-1.9646631",
+          "lon": "30.0644358"
+        }
+      }
+    },
+    {
+      "Saint Kitts and Nevis": {
+        "code": "KN",
+        "coordinates": {
+          "lat": "17.250512",
+          "lon": "-62.6725973"
+        }
+      }
+    },
+    {
+      "Saint Lucia": {
+        "code": "LC",
+        "coordinates": {
+          "lat": "13.8250489",
+          "lon": "-60.975036"
+        }
+      }
+    },
+    {
+      "Saint Vincent and the Grenadines": {
+        "code": "VC",
+        "coordinates": {
+          "lat": "12.90447",
+          "lon": "-61.2765569"
+        }
+      }
+    },
+    {
+      "Samoa": {
+        "code": "WS",
+        "coordinates": {
+          "lat": "-13.7693895",
+          "lon": "-172.12005"
+        }
+      }
+    },
+    {
+      "San Marino": {
+        "code": "SM",
+        "coordinates": {
+          "lat": "43.9458623",
+          "lon": "12.458306"
+        }
+      }
+    },
+    {
+      "Sao Tome and Principe": {
+        "code": "ST",
+        "coordinates": {
+          "lat": "0.9713095",
+          "lon": "7.02255"
+        }
+      }
+    },
+    {
+      "Saudi Arabia": {
+        "code": "SA",
+        "coordinates": {
+          "lat": "25.6242618",
+          "lon": "42.3528328"
+        }
+      }
+    },
+    {
+      "Senegal": {
+        "code": "SN",
+        "coordinates": {
+          "lat": "14.4750607",
+          "lon": "-14.4529612"
+        }
+      }
+    },
+    {
+      "Serbia": {
+        "code": "RS",
+        "coordinates": {
+          "lat": "44.1534121",
+          "lon": "20.55144"
+        }
+      }
+    },
+    {
+      "Seychelles": {
+        "code": "SC",
+        "coordinates": {
+          "lat": "-4.6574977",
+          "lon": "55.4540146"
+        }
+      }
+    },
+    {
+      "Sierra Leone": {
+        "code": "SL",
+        "coordinates": {
+          "lat": "8.6400349",
+          "lon": "-11.8400269"
+        }
+      }
+    },
+    {
+      "Singapore": {
+        "code": "SG",
+        "coordinates": {
+          "lat": "1.357107",
+          "lon": "103.8194992"
+        }
+      }
+    },
+    {
+      "Slovakia": {
+        "code": "SK",
+        "coordinates": {
+          "lat": "48.7411522",
+          "lon": "19.4528646"
+        }
+      }
+    },
+    {
+      "Slovenia": {
+        "code": "SI",
+        "coordinates": {
+          "lat": "45.8133113",
+          "lon": "14.4808369"
+        }
+      }
+    },
+    {
+      "Solomon Islands": {
+        "code": "SB",
+        "coordinates": {
+          "lat": "-8.7053941",
+          "lon": "159.1070693851845"
+        }
+      }
+    },
+    {
+      "Somalia": {
+        "code": "SO",
+        "coordinates": {
+          "lat": "8.3676771",
+          "lon": "49.083416"
+        }
+      }
+    },
+    {
+      "South Africa": {
+        "code": "ZA",
+        "coordinates": {
+          "lat": "-28.8166236",
+          "lon": "24.991639"
+        }
+      }
+    },
+    {
+      "South Georgia and the South Sandwich Islands": {
+        "code": "GS",
+        "coordinates": {
+          "lat": "-54.8432857",
+          "lon": "-35.8090698"
+        }
+      }
+    },
+    {
+      "Spain": {
+        "code": "ES",
+        "coordinates": {
+          "lat": "39.3260685",
+          "lon": "-4.8379791"
+        }
+      }
+    },
+    {
+      "Sri Lanka": {
+        "code": "LK",
+        "coordinates": {
+          "lat": "7.5554942",
+          "lon": "80.7137847"
+        }
+      }
+    },
+    {
+      "Sudan": {
+        "code": "SD",
+        "coordinates": {
+          "lat": "14.5844444",
+          "lon": "29.4917691"
+        }
+      }
+    },
+    {
+      "Suriname": {
+        "code": "SR",
+        "coordinates": {
+          "lat": "4.1413025",
+          "lon": "-56.0771187"
+        }
+      }
+    },
+    {
+      "Swaziland": {
+        "code": "SZ",
+        "coordinates": {
+          "lat": "-26.5624806",
+          "lon": "31.3991317"
+        }
+      }
+    },
+    {
+      "Sweden": {
+        "code": "SE",
+        "coordinates": {
+          "lat": "59.6749712",
+          "lon": "14.5208584"
+        }
+      }
+    },
+    {
+      "Switzerland": {
+        "code": "CH",
+        "coordinates": {
+          "lat": "46.7985624",
+          "lon": "8.2319736"
+        }
+      }
+    },
+    {
+      "Syrian Arab Republic": {
+        "code": "SY",
+        "coordinates": {
+          "lat": "34.6401861",
+          "lon": "39.0494106"
+        }
+      }
+    },
+    {
+      "Tajikistan": {
+        "code": "TJ",
+        "coordinates": {
+          "lat": "38.6281733",
+          "lon": "70.8156541"
+        }
+      }
+    },
+    {
+      "Thailand": {
+        "code": "TH",
+        "coordinates": {
+          "lat": "14.8971921",
+          "lon": "100.83273"
+        }
+      }
+    },
+    {
+      "Timor-Leste": {
+        "code": "TL",
+        "coordinates": {
+          "lat": "-8.5151979",
+          "lon": "125.8375756"
+        }
+      }
+    },
+    {
+      "Togo": {
+        "code": "TG",
+        "coordinates": {
+          "lat": "8.7800265",
+          "lon": "1.0199765"
+        }
+      }
+    },
+    {
+      "Tokelau": {
+        "code": "TK",
+        "coordinates": {
+          "lat": "-9.1676396",
+          "lon": "-171.819687"
+        }
+      }
+    },
+    {
+      "Tonga": {
+        "code": "TO",
+        "coordinates": {
+          "lat": "-19.9160819",
+          "lon": "-175.202642"
+        }
+      }
+    },
+    {
+      "Trinidad and Tobago": {
+        "code": "TT",
+        "coordinates": {
+          "lat": "10.8677845",
+          "lon": "-60.9821067"
+        }
+      }
+    },
+    {
+      "Tunisia": {
+        "code": "TN",
+        "coordinates": {
+          "lat": "33.8439408",
+          "lon": "9.400138"
+        }
+      }
+    },
+    {
+      "Turkey": {
+        "code": "TR",
+        "coordinates": {
+          "lat": "38.9597594",
+          "lon": "34.9249653"
+        }
+      }
+    },
+    {
+      "Turkmenistan": {
+        "code": "TM",
+        "coordinates": {
+          "lat": "39.3763807",
+          "lon": "59.3924609"
+        }
+      }
+    },
+    {
+      "Turks and Caicos Islands": {
+        "code": "TC",
+        "coordinates": {
+          "lat": "21.7214683",
+          "lon": "-71.6201783"
+        }
+      }
+    },
+    {
+      "Tuvalu": {
+        "code": "TV",
+        "coordinates": {
+          "lat": "-8.6405212",
+          "lon": "179.1582918181797"
+        }
+      }
+    },
+    {
+      "Uganda": {
+        "code": "UG",
+        "coordinates": {
+          "lat": "1.5333554",
+          "lon": "32.2166578"
+        }
+      }
+    },
+    {
+      "Ukraine": {
+        "code": "UA",
+        "coordinates": {
+          "lat": "49.4871968",
+          "lon": "31.2718321"
+        }
+      }
+    },
+    {
+      "United Arab Emirates": {
+        "code": "AE",
+        "coordinates": {
+          "lat": "24.0002488",
+          "lon": "53.9994829"
+        }
+      }
+    },
+    {
+      "United Kingdom": {
+        "code": "GB",
+        "coordinates": {
+          "lat": "54.7023545",
+          "lon": "-3.2765753"
+        }
+      }
+    },
+    {
+      "United States": {
+        "code": "US",
+        "coordinates": {
+          "lat": "39.7837304",
+          "lon": "-100.445882"
+        }
+      }
+    },
+    {
+      "Uruguay": {
+        "code": "UY",
+        "coordinates": {
+          "lat": "-32.8755548",
+          "lon": "-56.0201525"
+        }
+      }
+    },
+    {
+      "Uzbekistan": {
+        "code": "UZ",
+        "coordinates": {
+          "lat": "41.32373",
+          "lon": "63.9528098"
+        }
+      }
+    },
+    {
+      "Vanuatu": {
+        "code": "VU",
+        "coordinates": {
+          "lat": "-16.5255069",
+          "lon": "168.1069154"
+        }
+      }
+    },
+    {
+      "Venezuela": {
+        "code": "VE",
+        "coordinates": {
+          "lat": "8.0018709",
+          "lon": "-66.1109318"
+        }
+      }
+    },
+    {
+      "Viet Nam": {
+        "code": "VN",
+        "coordinates": {
+          "lat": "13.2904027",
+          "lon": "108.4265113"
+        }
+      }
+    },
+    {
+      "Western Sahara": {
+        "code": "EH",
+        "coordinates": {
+          "lat": "23.340694499999998",
+          "lon": "-13.129132651166511"
+        }
+      }
+    },
+    {
+      "Yemen": {
+        "code": "YE",
+        "coordinates": {
+          "lat": "16.3471243",
+          "lon": "47.8915271"
+        }
+      }
+    },
+    {
+      "Zambia": {
+        "code": "ZM",
+        "coordinates": {
+          "lat": "-14.5189121",
+          "lon": "27.5589884"
+        }
+      }
+    },
+    {
+      "Zimbabwe": {
+        "code": "ZW",
+        "coordinates": {
+          "lat": "-18.4554963",
+          "lon": "29.7468414"
+        }
+      }
+    }
+  ]

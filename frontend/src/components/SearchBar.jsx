@@ -482,7 +482,7 @@ const SearchBar = ({ country, openCountryModal, handleOpenCountryModal, handleCl
           />
         )}
       />
-      <CountryModal country={country} openCountryModal={openCountryModal} handleCloseCountryModal={handleCloseCountryModal}/>
+      { openCountryModal && <CountryModal country={country} openCountryModal={openCountryModal} handleCloseCountryModal={handleCloseCountryModal}/>}
     </>
   );
 };
